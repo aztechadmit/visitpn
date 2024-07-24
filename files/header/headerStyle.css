@@ -3,6 +3,7 @@
     	position:fixed; top:0; left:0; right:0;
     	background:linear-gradient(90deg,lightseagreen,teal);
     	border-bottom:solid 6px lightgray; text-align:center;
+	z-index:999;
     }
 	#headerLogo {
 		height:90px; width:auto; object-fit:cover; margin-top:10px; cursor:pointer; transition:0.5s;
