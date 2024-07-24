@@ -30,4 +30,5 @@ window.onresize = function(){createHeader();};
 function openTTD(){
 	const headerBar = document.getElementById("headerBar");
 	headerBar.innerHTML += "<div id='menuContent'> <a>Attractions</a> <a>Restaurants</a> <a>Entertainment</a> <a>Museums & Art</a> </div>";
+	document.getElementById("menuContent").style.opacity = 1;
 }
