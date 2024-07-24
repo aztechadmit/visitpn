@@ -12,11 +12,11 @@ function endPageLoad(){
 function createHeader(){
 	if(window.innerWidth > 650){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
-							<div id='headerContent><a>Places to Visit</a> <a>Things to Do</a> <a>Plan Your Visit</a> <a>Information</a></div> </div>";
+							<div id='headerContent'><a>Places to Visit</a> <a>Things to Do</a> <a>Plan Your Visit</a> <a>Information</a></div> </div>";
 		
-	}else{							// Small Window
+	}else{				// Small Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
-							<div id='headerContent><a>Menu<a></div> </div>";
+							<div id='headerContent'><a>Menu<a></div> </div>";
 	}
 }// end of function createHeader()
 
