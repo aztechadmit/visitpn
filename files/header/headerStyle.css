@@ -52,9 +52,19 @@
 #footer {
 	margin:0; margin-top:50px;
 	width:100%; padding:10px;
-	border-top:solid 6px silver; background:silver;
+	border-top:solid 6px midnightblue; background:silver;
 	text-align:center; color:black;
 }
+	#footerLinks{
+		width:100%; max-width:1200px; padding:0; margin:auto;
+		display:flex; flex-flow:row;
+	}
+	#footerLinks div{width:100%; text-align:left; padding-right:15px; margin:0;}
+	#footerLinks div a{text-decoration:none;} #footerLinks div a:hover{text-decoration:underline;}
+	@media screen and (max-width:1000px){
+		#footerLinks{flex-flow:column;}
+		#footerLinks div{text-align:center; padding:10px; margin-bottom:15px;}
+	}
 	#footerLogo{
 		display:block; height:140px; width:auto; margin:auto;
 		object-fit:cover; cursor:pointer;
