@@ -31,8 +31,8 @@ window.onresize = function(){createHeader();};
 function openTTD(num){
 	const menuContent = document.getElementById("menuContent");
 	const menuHidder = document.getElementById("closeMenu");
-	if(num != 0){ // open menu
-		menuContent.style.maxHeight = '0';
+	if(num != 0 && menuContent.style.maxHeight == 0){ // open menu
+		menuContent.style.maxHeight = 0;
 
 		switch(num){
 			case 1:
@@ -51,11 +51,11 @@ function openTTD(num){
 		
 		menuContent.style.display = 'block';
 		menuHidder.style.display = 'block';
-		setTimeout(function(){menuContent.style.maxHeight = '5000px';},100);
+		setTimeout(function(){menuContent.style.maxHeight = '1000px';},10);
 		
 	}else { //close menu
-		menuContent.style.maxHeight = '0';
+		menuContent.style.maxHeight = 0;
 		menuHidder.style.display = 'none';
-		setTimeout(function(){menuContent.style.display = "none";},600);
+		setTimeout(function(){menuContent.style.display = "none";},1000);
 	}
 }
