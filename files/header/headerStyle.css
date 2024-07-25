@@ -22,7 +22,7 @@
 	position:fixed; width:90%; max-width:1000px; 			
    	background:#efefef; border-radius:0 0 10px 10px;
     	top:140px; left:50%; transform: translate(-50%); padding-top:20px; 
-	transition:3s; overflow:hidden;
+	transition:1s; overflow:hidden;
 	display:none; z-index:997;
 }
 	#menuContent #imgHolders {
