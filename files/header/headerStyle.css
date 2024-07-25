@@ -26,7 +26,7 @@
 	display:none; z-index:997;
 }
 	@media screen and (max-width:1000px){
-		#menuContent{width:80%; border: 2px solid black;}
+		#headerContent{width:80%; border: 2px solid black;}
 	}
 	#menuContent #imgHolders {
 		display:flex; flex-flow:row;
