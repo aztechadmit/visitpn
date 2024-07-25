@@ -27,6 +27,7 @@
 }
 	@media screen and (max-width:1000px){
 		#headerContent{width:80%; border: 2px solid black;}
+		#menuContent{width:80%;}
 	}
 	#menuContent #imgHolders {
 		display:flex; flex-flow:row;
