@@ -39,3 +39,9 @@
 		position:fixed; top:0; left:0; right:0; bottom:0;
 		display:none; z-index:996;
 	}
+	#txtHolders a {
+		display:block; width:100%; margin:0; padding:10px; text-decoration:none; font-size:18px;
+	}
+	#txtHolders a:hover{
+		background:dimgray; color:white;
+	}
