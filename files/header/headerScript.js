@@ -13,14 +13,14 @@ function endPageLoad(){
 }// end of function endPageLoad()
 
 function createHeader(){
-	if(window.innerWidth > 650){ 	// Large Window
+	if(window.innerWidth > 800){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
 							<div id='headerContent'><a href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openTTD(1)'>Things to Do</a> <a href='"+linkHead+"planning'>Plan Your Visit</a> <a href='"+linkHead+"information'>Information</a></div> \
 							<div id='menuContent'></div> <div id='closeMenu' onmouseover='openTTD(0)'></div> </div>";
 		screenSize = 'large';
 	}else{				// Small Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
-							<div id='headerContent'><a>Menu</a></div> <div id='menuContent'></div> </div>";
+							<div id='headerContent'><a onmouseover='openTTD(3)'>Menu</a></div> <div id='menuContent'></div> <div id='closeMenu' onmouseover='openTTD(0)'></div> </div>";
 		screenSize = 'small';
 	}
 }// end of function createHeader()
@@ -43,6 +43,9 @@ function openTTD(num){
 										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Casinos & Resorts</a> </div>";
 				break;
 			case 2:
+				break;
+			case 3:
+				menuContent.innerHTML = "<div id='txtHolders'> <a>Attractions</a> <a>Restaurants & Dining</a> <a>Entertainment</a> <a>Museums & Art</a> <a>Casinos & Resorts</a> </div>";
 				break;
 		} // end of switch statement
 		
