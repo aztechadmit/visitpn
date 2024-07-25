@@ -65,7 +65,11 @@ function openTTD(num){
 } // end of function openTTD()
 
 function createFooter(){
-	footer.innerHTML = "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
+	footer.innerHTML = "<div id='footerLinks'> 	<div><h4>Information</h4><a>Getting to Puertas Nuevas</a> <a>Visitor Guides</a> <a>Frequently Asked Questions</a> <a>Travel Updates</a></div> \
+							<div><h4>Plan Your Visit</h4> <a>Transportation</a> <a>Rental Services</a> <a>Hotels & Lodging</a> <a>Destination Events</a> </div> \
+							<div><h4>Explore PN</h4> <a>Things to Do</a> <a>Events & Festivals</a> <a>Attractions</a> <a>Casinos & Resorts</a> <a>Museums & History</a> <a>Art & Culture</a> </div> \
+							<div><h4>Business Opportunities</h4> <a>Filming in PN</a> <a>Corporate Events</a> <a>Long-Term Visitors</a> </div> </div>";
+	footer.innerHTML += "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
 	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism</p><p><a>Legal Information</a> | <a>Business</a> | <a>MCBPO</a></p>";
 }// end of function createFooter()
 
