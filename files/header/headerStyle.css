@@ -29,10 +29,13 @@
 		display:flex; flex-flow:row;
 	}
 	#menuContent #imgHolders a{
-		width:100%; text-decoration:none; font-size:18px; text-align:center; margin:0; padding:10px; align-self:stretch;
+		width:100%; text-decoration:none; font-size:18px; text-align:center; margin:0; padding:10px; align-self:stretch; transition:0.5s;
+	}
+	#menuContent #imgHolders a:hover{
+		background:gray;
 	}
 	#menuContent #imgHolders a img{
-		width:90%; height:auto;
+		width:70%; height:auto;
 		display:block; margin:0; margin-bottom:5px;
 	}
 	#closeMenu{
@@ -40,7 +43,7 @@
 		display:none; z-index:996;
 	}
 	#txtHolders a {
-		display:block; width:100%; margin:0; padding:10px; text-decoration:none; font-size:18px;
+		display:block; width:100%; margin:0; padding:10px; text-decoration:none; font-size:18px; transition:0.5s;
 	}
 	#txtHolders a:hover{
 		background:dimgray; color:white;
