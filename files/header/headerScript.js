@@ -14,7 +14,7 @@ function endPageLoad(){
 
 function createHeader(){
 	if(window.innerWidth > 800){ 	// Large Window
-		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
+		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'> \
 							<div id='headerContent'><a  onmouseover='openTTD(0)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openTTD(1)'>Things to Do</a> <a  onmouseover='openTTD(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openTTD(0)'>Information</a></div> \
 							<div id='menuContent'></div> <div id='closeMenu' onmouseover='openTTD(0)'></div> </div>";
 		screenSize = 'large';
@@ -23,6 +23,8 @@ function createHeader(){
 							<div id='headerContent'><a onmouseover='openTTD(3)'>Menu</a></div> <div id='menuContent'></div> <div id='closeMenu' onmouseover='openTTD(0)'></div> </div>";
 		screenSize = 'small';
 	}
+
+	createFooter();
 }// end of function createHeader()
 
 // Resize header if the window size changes
@@ -51,15 +53,19 @@ function openTTD(num){
 				break;
 		} // end of switch statement
 
-		if(menuContent.style.display != 'block'){
-			menuContent.style.display = 'block';
-			menuHidder.style.display = 'block';
-			setTimeout(function(){menuContent.style.maxHeight = '1000px';},5);
-		}
+		menuHidder.style.display = 'block';
+		menuContent.style.display = 'block';
+		menuContent.style.height = 'auto';
 		
 	}else { //close menu
-		menuContent.style.maxHeight = 0;
+		menuContent.style.height = 0;
 		menuHidder.style.display = 'none';
-		setTimeout(function(){menuContent.style.display = "none";},500);
+		setTimeout(function(){if(num==0){menuContent.style.display = "none";}},450);
 	}
-}
+} // end of function openTTD()
+
+function createFooter(){
+	footer.innerHTML = "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
+}// end of function createFooter()
+
+
