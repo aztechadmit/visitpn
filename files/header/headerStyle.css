@@ -3,7 +3,7 @@
     	position:fixed; top:0; left:0; right:0;
     	background:linear-gradient(90deg,lightseagreen,teal);
     	border-bottom:solid 6px lightgray; text-align:center;
-	z-index:998;
+	z-index:995;
     }
 	#headerLogo {
 		height:90px; width:auto; object-fit:cover; margin-top:10px; cursor:pointer; transition:0.5s;
@@ -25,6 +25,10 @@
 	transition:0.5s; overflow:hidden;
 	display:none; z-index:997;
 	animation: menuOpen 1s;
+}
+#closeMenu{
+	position:fixed; top:0; left:0; right:0; bottom:0;
+	display:none; z-index:996;
 }
 
 @keyframes menuOpen{
