@@ -22,16 +22,10 @@
 	position:fixed; width:90%; max-width:1000px; 			
    	background:#efefef; border-radius:0 0 10px 10px;
     	top:140px; left:50%; transform: translate(-50%); padding-top:20px; 
-	transition:0.5s; overflow:hidden;
+	transition:0.8s; overflow:hidden;
 	display:none; z-index:997;
-	animation: menuOpen 1s;
 }
 #closeMenu{
 	position:fixed; top:0; left:0; right:0; bottom:0;
 	display:none; z-index:996;
-}
-
-@keyframes menuOpen{
-	from{height:0;}
-	to{height:auto;}
 }
