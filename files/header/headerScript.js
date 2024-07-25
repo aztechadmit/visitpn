@@ -36,6 +36,7 @@ function openTTD(num){
 		menuContent.innerHTML = "<a>Attractions</a> <a>Restaurants</a> <a>Entertainment</a> <a>Museums & Art</a>";
 		menuContent.style.display = 'block';
 		menuHidder.style.display = 'block';
+		menuContent.style.height = 'auto';
 	}else { //close menu
 		menuContent.style.height = '0';
 		menuHidder.style.display = 'none';
