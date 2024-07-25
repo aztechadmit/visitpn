@@ -22,11 +22,12 @@
 	position:fixed; width:90%; max-width:1000px; 			
    	background:lightgray; border-radius:0 0 10px 10px;
     	top:140px; left:50%; transform: translate(-50%); padding-top:20px; 
+	border: 1px solid black;
 	transition:0.5s; overflow:hidden;
 	display:none; z-index:997;
 }
 	@media screen and (max-width:1000px){
-		#headerContent{width:80%; border: 2px solid black;}
+		#headerContent{width:80%; border: 1px solid black;}
 		#menuContent{width:80%;}
 	}
 	#menuContent #imgHolders {
