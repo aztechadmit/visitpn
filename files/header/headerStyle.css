@@ -51,6 +51,10 @@
 
 #footer {
 	margin:0; margin-top:50px;
-	width:100%;
-	border-top:solid 6px silver;
+	width:100%; padding:10px;
+	border-top:solid 6px silver; 
+	text-align:center;
 }
+	#footerLogo{
+		height:140px; width:auto; margin:auto;
+	}
