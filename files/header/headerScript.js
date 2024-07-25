@@ -30,7 +30,8 @@ window.onresize = function(){createHeader();};
 
 function openTTD(){
 	const headerBar = document.getElementById("headerBar");
+	const menuContent = document.getElementById("menuContent");
 	menuContent.innerHTML = "<a>Attractions</a> <a>Restaurants</a> <a>Entertainment</a> <a>Museums & Art</a>";
 	menuContent.style.display = 'block';
-	setTimeout(function(){document.getElementById("menuContent").style.opacity = 1;},100);
+	setTimeout(function(){menuContent.style.opacity = 1;},100);
 }
