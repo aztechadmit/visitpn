@@ -55,10 +55,10 @@ function openTTD(num){
 
 		menuHidder.style.display = 'block';
 		menuContent.style.display = 'block';
-		menuContent.style.height = 'auto';
+		menuContent.style.maxHeight = '1000';
 		
 	}else { //close menu
-		menuContent.style.height = 0;
+		menuContent.style.maxHeight = 0;
 		menuHidder.style.display = 'none';
 		setTimeout(function(){if(num==0){menuContent.style.display = "none";}},450);
 	}
@@ -66,6 +66,7 @@ function openTTD(num){
 
 function createFooter(){
 	footer.innerHTML = "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
+	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism</p><p><a>Legal Information</a> | <a>Business</a> | <a>MCBPO</a></p>";
 }// end of function createFooter()
 
 
