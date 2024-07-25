@@ -49,11 +49,11 @@ function openTTD(num){
 		
 		menuContent.style.display = 'block';
 		menuHidder.style.display = 'block';
-		setTimeout(function(){menuContent.style.maxHeight = '1000px';},1);
+		setTimeout(function(){menuContent.style.maxHeight = '1000px';},5);
 		
 	}else { //close menu
 		menuContent.style.maxHeight = 0;
 		menuHidder.style.display = 'none';
-		setTimeout(function(){menuContent.style.display = "none";},1000);
+		setTimeout(function(){menuContent.style.display = "none";},500);
 	}
 }
