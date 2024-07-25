@@ -52,8 +52,8 @@
 #footer {
 	margin:0; margin-top:50px;
 	width:100%; padding:10px;
-	border-top:solid 6px silver; linear-gradient(90deg,midnightblue,darkblue);
-	text-align:center; color:white;
+	border-top:solid 6px silver; background:silver;
+	text-align:center; color:black;
 }
 	#footerLogo{
 		display:block; height:140px; width:auto; margin:auto;
