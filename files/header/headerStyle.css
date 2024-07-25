@@ -46,5 +46,5 @@
 		display:block; width:100%; margin:0; padding:10px; text-decoration:none; font-size:18px; transition:0.5s;
 	}
 	#txtHolders a:hover{
-		background:sliver; color:black;
+		background:gray; color:white;
 	}
