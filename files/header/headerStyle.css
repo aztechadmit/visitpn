@@ -60,7 +60,7 @@
 		display:flex; flex-flow:row;
 	}
 	#footerLinks div{width:100%; text-align:left; padding-right:15px; margin:0;}
-	#footerLinks div a{text-decoration:none;} #footerLinks div a:hover{text-decoration:underline;}
+	#footerLinks div a{text-decoration:none; display:block; margin-bottom:10px;} #footerLinks div a:hover{text-decoration:underline;}
 	@media screen and (max-width:1000px){
 		#footerLinks{flex-flow:column;}
 		#footerLinks div{text-align:center; padding:10px; margin-bottom:15px;}
