@@ -56,5 +56,6 @@
 	text-align:center;
 }
 	#footerLogo{
-		height:140px; width:auto; margin:auto;
+		display:block; height:140px; width:auto; margin:auto;
+		object-fit:cover; cursor:pointer;
 	}
