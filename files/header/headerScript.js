@@ -33,10 +33,23 @@ function openTTD(num){
 	const menuHidder = document.getElementById("closeMenu");
 	if(num != 0){ // open menu
 		menuContent.style.height = '0';
-		menuContent.innerHTML = "<a>Attractions</a> <a>Restaurants</a> <a>Entertainment</a> <a>Museums & Art</a>";
+
+		switch(num){
+			case 1:
+				menuContent.innerHTML = "<div id='imgHolders'>  <a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Attractions</a> \
+										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Restaurants</a> \
+										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Entertainment</a> \
+										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Museums & Art</a> \
+										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Casinos & Resorts</a> </div>";
+				break;
+			case 2:
+				break;
+		} // end of switch statement
+		
 		menuContent.style.display = 'block';
 		menuHidder.style.display = 'block';
-		menuContent.style.height = 'auto';
+		setTimeout(function(){menuContent.style.height = 'auto';},100);
+		
 	}else { //close menu
 		menuContent.style.height = '0';
 		menuHidder.style.display = 'none';
