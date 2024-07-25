@@ -15,7 +15,7 @@ function endPageLoad(){
 function createHeader(){
 	if(window.innerWidth > 650){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
-							<div id='headerContent'><a href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onhover='openTTD()'>Things to Do</a> <a href='"+linkHead+"planning'>Plan Your Visit</a> <a href='"+linkHead+"information'>Information</a></div> \
+							<div id='headerContent'><a href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openTTD(1)'>Things to Do</a> <a href='"+linkHead+"planning'>Plan Your Visit</a> <a href='"+linkHead+"information'>Information</a></div> \
 							<div id='menuContent'></div> </div>";
 		screenSize = 'large';
 	}else{				// Small Window
@@ -28,10 +28,14 @@ function createHeader(){
 // Resize header if the window size changes
 window.onresize = function(){createHeader();};
 
-function openTTD(){
-	const headerBar = document.getElementById("headerBar");
+function openTTD(num){
 	const menuContent = document.getElementById("menuContent");
-	menuContent.innerHTML = "<a>Attractions</a> <a>Restaurants</a> <a>Entertainment</a> <a>Museums & Art</a>";
-	menuContent.style.display = 'block';
-	setTimeout(function(){menuContent.style.opacity = 1;},100);
+	if(num != 0){ // open menu
+		menuContent.style.height = '0';
+		menuContent.innerHTML = "<a>Attractions</a> <a>Restaurants</a> <a>Entertainment</a> <a>Museums & Art</a>";
+		menuContent.style.display = 'block';
+	}else { //close menu
+		menuContent.style.height = '0';
+		setTimeout(function(){menuContent.style.display = "none";},600);
+	}
 }
