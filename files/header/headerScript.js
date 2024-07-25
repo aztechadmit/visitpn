@@ -15,7 +15,7 @@ function endPageLoad(){
 function createHeader(){
 	if(window.innerWidth > 800){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
-							<div id='headerContent'><a href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openTTD(1)'>Things to Do</a> <a href='"+linkHead+"planning'>Plan Your Visit</a> <a href='"+linkHead+"information'>Information</a></div> \
+							<div id='headerContent'><a  onmouseover='openTTD(0)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openTTD(1)'>Things to Do</a> <a  onmouseover='openTTD(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openTTD(0)'>Information</a></div> \
 							<div id='menuContent'></div> <div id='closeMenu' onmouseover='openTTD(0)'></div> </div>";
 		screenSize = 'large';
 	}else{				// Small Window
@@ -41,15 +41,21 @@ function openTTD(num){
 										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Casinos & Resorts</a> </div>";
 				break;
 			case 2:
+				menuContent.innerHTML = "<div id='imgHolders'>  <a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Places to Stay</a> \
+										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Aiports and Transit</a> \
+										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Rental Services</a> \
+										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Visitor Guides</a> </div>";
 				break;
 			case 3:
 				menuContent.innerHTML = "<div id='txtHolders'> <a>Attractions</a> <a>Restaurants & Dining</a> <a>Entertainment</a> <a>Museums & Art</a> <a>Casinos & Resorts</a> </div>";
 				break;
 		} // end of switch statement
-		
-		menuContent.style.display = 'block';
-		menuHidder.style.display = 'block';
-		setTimeout(function(){menuContent.style.maxHeight = '1000px';},5);
+
+		if(menuContent.style.display != 'block'){
+			menuContent.style.display = 'block';
+			menuHidder.style.display = 'block';
+			setTimeout(function(){menuContent.style.maxHeight = '1000px';},5);
+		}
 		
 	}else { //close menu
 		menuContent.style.maxHeight = 0;
