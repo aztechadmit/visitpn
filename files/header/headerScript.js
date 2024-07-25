@@ -55,7 +55,7 @@ function openTTD(num){
 
 		menuHidder.style.display = 'block';
 		menuContent.style.display = 'block';
-		menuContent.style.maxHeight = '1000';
+		menuContent.style.maxHeight = 1000;
 		
 	}else { //close menu
 		menuContent.style.maxHeight = 0;
