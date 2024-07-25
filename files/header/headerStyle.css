@@ -1,7 +1,7 @@
 #headerBar{
 	height:123px;
     	position:fixed; top:0; left:0; right:0;
-    	background:linear-gradient(90deg,lightseagreen,teal);
+    	background:linear-gradient(90deg,midnightblue,darkblue);
     	border-bottom:solid 6px lightgray; text-align:center;
 	z-index:995;
     }
