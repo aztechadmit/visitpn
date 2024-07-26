@@ -23,6 +23,7 @@
    	background:#8A9AB1; border-radius:0 0 10px 10px;
     	top:140px; left:50%; transform: translate(-50%); padding-top:20px; 
 	border: 1px solid black;
+	transition: max-height 0.4s ease-out;
 	transition:0.5s; overflow-x:hidden; overflow-y:auto;
 	display:none; z-index:997;
 }
