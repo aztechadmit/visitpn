@@ -34,6 +34,7 @@ function openTTD(num){
 	const menuContent = document.getElementById("menuContent");
 	const menuHidder = document.getElementById("closeMenu");
 	if(num != 0){ // open menu
+		menuContent.style.maxHeight = 0.75*screen.height + "px";
 		switch(num){
 			case 1:
 				menuContent.innerHTML = "<div id='imgHolders'>  <a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Attractions</a> \
@@ -54,15 +55,9 @@ function openTTD(num){
 				break;
 		} // end of switch statement
 
-		
 		menuHidder.style.display = 'block';
 		menuContent.style.display = 'block';
-		if( menuContent.scrollHeight > 0.5*screen.height){
-			menuContent.style.maxHeight = 0.7*screen.height + "px";
-		}else{
-			menuContent.style.maxHeight = menuContent.scrollHeight + "px";
-		}
-
+		
 	}else { //close menu
 		menuContent.style.maxHeight = null;
 		menuHidder.style.display = 'none';
