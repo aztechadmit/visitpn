@@ -83,7 +83,7 @@ function createFooter(){
 var HC = document.getElementsByClassName("headerCollapsible");
 var Hi;
 
-for (Hi = 0; Hi < HC.length; i++) {
+for (Hi = 0; Hi < HC.length; Hi++) {
   HC[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var HCcontent = this.nextElementSibling;
