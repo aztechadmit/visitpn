@@ -34,7 +34,6 @@ function openTTD(num){
 	const menuContent = document.getElementById("menuContent");
 	const menuHidder = document.getElementById("closeMenu");
 	if(num != 0){ // open menu
-		menuContent.style.maxHeight = '1000px';
 		switch(num){
 			case 1:
 				menuContent.innerHTML = "<div id='imgHolders'>  <a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Attractions</a> \
@@ -50,17 +49,24 @@ function openTTD(num){
 										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Visitor Guides</a> </div>";
 				break;
 			case 3:
-				menuContent.innerHTML = "<div id='txtHolders'> <a>Attractions</a> <a>Restaurants & Dining</a> <a>Entertainment</a> <a>Museums & Art</a> <a>Casinos & Resorts</a> </div>";
+				menuContent.innerHTML = "<div id='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
+							<a class='headerCollapsible'>Plan Your Visit</a><div class='HCcontent'><a>Places to Stay</a> <a>Airport & Transit</a> <a>Rental Services</a> <a>Visitor Guides</a></div> <a>Information</a></div>";
 				break;
 		} // end of switch statement
 
+		
 		menuHidder.style.display = 'block';
 		menuContent.style.display = 'block';
+		if( menuContent.scrollHeight > 0.5*screen.height){
+			menuContent.style.maxHeight = 0.7*screen.height + "px";
+		}else{
+			menuContent.style.maxHeight = menuContent.scrollHeight + "px";
+		}
 
 	}else { //close menu
-		menuContent.style.maxHeight = 0;
+		menuContent.style.maxHeight = null;
 		menuHidder.style.display = 'none';
-		setTimeout(function(){if(num==0){menuContent.style.display = "none";}},450);
+		setTimeout(function(){if(num==0){menuContent.style.display = "none";}},400);
 	}
 } // end of function openTTD()
 
@@ -72,5 +78,21 @@ function createFooter(){
 	footer.innerHTML += "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
 	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism</p><p><a>Legal Information</a> | <a>Business</a> | <a>MCBPO</a></p>";
 }// end of function createFooter()
+
+// For Collapsible Menus:
+var HC = document.getElementsByClassName("headerCollapsible");
+var Hi;
+
+for (Hi = 0; Hi < HC.length; i++) {
+  HC[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var HCcontent = this.nextElementSibling;
+    if (HCcontent.style.display === "block") {
+      HCcontent.style.display = "none";
+    } else {
+      HCcontent.style.display = "block";
+    }
+  });
+}
 
 
