@@ -59,7 +59,7 @@ function openTTD(num){
 		menuContent.style.display = 'block';
 		
 	}else { //close menu
-		menuContent.style.maxHeight = null;
+		menuContent.style.maxHeight = 0;
 		menuHidder.style.display = 'none';
 		setTimeout(function(){if(num==0){menuContent.style.display = "none";}},400);
 	}
