@@ -35,13 +35,14 @@
 		display:flex; flex-flow:row;
 	}
 	#menuContent #imgHolders a{
-		width:100%; text-decoration:none; font-size:18px; text-align:center; margin:0; padding:10px; align-self:stretch; transition:0.5s; padding-bottom:20px;
+		width:100%; text-decoration:none; font-size:19px; text-align:center; margin:0; padding:10px; align-self:stretch; transition:0.5s; padding-bottom:20px;
+		color:#B0C4D9;
 	}
 	#menuContent #imgHolders a:hover{
 		background:silver;
 	}
 	#menuContent #imgHolders a img{
-		width:70%; height:auto;
+		width:60%; height:auto;
 		display:block; margin:auto; margin-bottom:10px;
 	}
 	#closeMenu{
