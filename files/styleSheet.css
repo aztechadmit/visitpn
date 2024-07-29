@@ -2,6 +2,9 @@
 	midnightblue - darkblue
 	lightgray
 	darkslategray
+
+	MAX WIDTH - 1100px
+	margin: top right bottom left
 */
 
 * {  box-sizing: border-box; } html { scroll-behavior: smooth; }
@@ -25,10 +28,30 @@ a {color:inherit;}
 
 .titleBar{width:100%; background:linear-gradient(90deg,midnightblue,darkblue); margin:0; padding:10px; text-align:center; color:white;}
 .subtitleBar {width:100%; background:lightgray; padding:10px; margin:0; text-align:center;}
-	.subtitleBar p {max-width:1200px; margin:auto; margin-top:10px; margin-bottom:10px;}
+	.subtitleBar p {max-width:1100px; margin:auto; margin-top:10px; margin-bottom:10px;}
+
+/* -- PAGE BREAKS AND SPACERS -- */
+
+.imgSpacer {width:100%; padding:10px; height:270px;
+	    display:flex; text-align:center; margin:10px 0 10px 0;}
+	.imgSpacer img{width:100%; max-width:1100px; height:250px; margin:auto; object-fit:cover; border-radius:20px;}
+
+.spacer {width:full; height:2px; background:gray; max-width:1100px; margin:20px auto 20px auto;}
 
 
+/* -- TEXT AND CONTENT ELEMENTS -- */
 
+.container{width:100%; max-width:1100px; padding:10px; margin:20px auto 20px auto; border-radius:20px;}
+
+.columnContainer{display:flex; width:100%; margin:0 -10px 0 -10px; padding:0; flex-flow:row;}
+	.columnContainer img{margin:10px; width:40%; align-self:stretch; object-fit:cover; border-radius:20px;}
+	.columnContainer div{margin:10px; width:70%; align-self:stretch;}
+	@media screen and (max-width:600px){
+		.columnContainer{flex-flow:column; margin:0 0 0 0; justify-content:center;}
+		.columnContainer img, .columnContainer div {width:100%; margin:10px 0 10px 0;}
+	}
+
+.fullContainer {width:100%; background:silver; margin:20px 0 20px 0; padding:10px;}
 
 
 
