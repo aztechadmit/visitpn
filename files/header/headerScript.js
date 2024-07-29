@@ -52,6 +52,7 @@ function openTTD(num){
 			case 3:
 				menuContent.innerHTML = "<div id='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
 							<a class='headerCollapsible'>Plan Your Visit</a><div class='HCcontent'><a>Places to Stay</a> <a>Airport & Transit</a> <a>Rental Services</a> <a>Visitor Guides</a></div> <a>Information</a></div>";
+				miniMenuSetup();
 				break;
 		} // end of switch statement
 
@@ -74,20 +75,24 @@ function createFooter(){
 	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism</p><p><a>Legal Information</a> | <a>Business</a> | <a>MCBPO</a></p>";
 }// end of function createFooter()
 
-// For Collapsible Menus:
-var HC = document.getElementsByClassName("headerCollapsible");
-var Hi;
-
-for (Hi = 0; Hi < HC.length; Hi++) {
-  HC[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var HCcontent = this.nextElementSibling;
-    if (HCcontent.style.display === "block") {
-      HCcontent.style.display = "none";
-    } else {
-      HCcontent.style.display = "block";
-    }
-  });
+function miniMenuSetup(){
+	// For Collapsible Menus:
+	var HC = document.getElementsByClassName("headerCollapsible");
+	var Hi;
+	
+	for (Hi = 0; Hi < HC.length; Hi++) {
+	  HC[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var HCcontent = this.nextElementSibling;
+	    if (HCcontent.style.display === "block") {
+	      HCcontent.style.display = "none";
+	    } else {
+	      HCcontent.style.display = "block";
+	    }
+	  });
+	}
+	console.log("miniMenu");
 }
+
 
 
