@@ -33,7 +33,7 @@ function createHeader(){
 		
 	}else{				// Small Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
-							<div id='headerContent'><a onmouseover='miniMenus(1)' id='menDispTxt'>Menu</a></div> <div class='menuContent' id='allMenu'></div> <div id='closeMenu' onmouseover='miniMenus(0)'></div> </div>";
+							<div id='headerContent'><a onmouseover='miniMenus()' id='menDispTxt'>Menu</a></div> <div class='menuContent' id='allMenu'></div> <div id='closeMenu' onmouseover='miniMenus()'></div> </div>";
 		const allMenu = document.getElementById("allMenu");
 		allMenu.innerHTML = "<div class='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
 							<a class='headerCollapsible'>Plan Your Visit</a><div class='HCcontent'><a>Places to Stay</a> <a>Airport & Transit</a> <a>Rental Services</a> <a>Visitor Guides</a></div> <a>Information</a></div>";
@@ -93,18 +93,25 @@ function openMenus(num){
 	
 } // end of function openMenus()
 
-function miniMenus(num){
+miniMenuStaus = 0;
+
+function miniMenus(){
 	const allMenu = document.getElementById("allMenu");
 	const menDispTxt = document.getElementById("menDispTxt");
-	switch(num){
-		case 0:
-			menDispTxt.innerHTML = "Menu";
-			allMenu.style.display = 'none';		
-			break;
+	const allMenHide = document.getElementById("closeMenu");
+	switch(miniMenuStaus){
 		case 1:
-			menDispTxt.innerHTML = "Close menu";
+			menDispTxt.innerHTML = "Menu";
+			allMenu.style.display = 'none';
+			allMenHide.style.display = 'none';
+			miniMenuStaus = 0;
+			break;
+		case 0:
+			menDispTxt.innerHTML = "Close Menu";
 			allMenu.style.display = 'block';
-			allMenu.style.maxHeight = 0.60*window.innerHeight + "px";
+			allMenu.style.maxHeight = 0.70*window.innerHeight + "px";
+			allMenHide.style.display = 'block';
+			miniMenuStaus = 1;
 			break;
 	}// end of switch
 }// end of function miniMenus(num)
