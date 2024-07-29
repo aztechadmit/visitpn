@@ -25,7 +25,7 @@
 	border: 1px solid black;
 
 	display:none; max-height:0; transition:max-height 0.4s;
-	overflow-y:hidden;
+	overflow-y:hidden; z-index:998;
 }
 	@media screen and (max-width:800px){
 		#headerContent{width:80%; border: 1px solid black;}
