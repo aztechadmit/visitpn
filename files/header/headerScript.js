@@ -15,9 +15,22 @@ function endPageLoad(){
 function createHeader(){
 	if(window.innerWidth > 800){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'> \
-							<div id='headerContent'><a  onmouseover='openTTD(0)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openTTD(1)'>Things to Do</a> <a  onmouseover='openTTD(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openTTD(0)'>Information</a></div> \
-							<div id='menuContent'></div> <div id='closeMenu' onmouseover='openTTD(0)'></div> </div>";
+							<div id='headerContent'><a  onmouseover='openMenus(1)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openMenus(2)'>Things to Do</a> <a  onmouseover='openTTD(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openTTD(0)'>Information</a></div> \
+							<div class='menuContent' id='ttdMenu'></div> <div class='menuContent' id='pyvMenu'></div> <div id='closeMenu' onmouseover='openMenus(0)'></div> </div>";
 		screenSize = 'large';
+		
+		const ttdMenu = document.getElementById("ttdMenu");
+		ttdMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon.png'>Attractions</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png.png'>Restaurants</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png'>Sports & Entertainment</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png'>Museums & Art</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png'>Casinos & Resorts</a> </div>";
+		const pyvMenu = document.getElementById("pyvMenu");
+		pyvMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png.png'>Places to Stay</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png.png'>Aiports and Transit</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png.png'>Rental Services</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png.png'>Visitor Guides</a> </div>";
+		
 	}else{				// Small Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
 							<div id='headerContent'><a onmouseover='openTTD(3)'>Menu</a></div> <div id='menuContent'></div> <div id='closeMenu' onmouseover='openTTD(0)'></div> </div>";
@@ -30,41 +43,34 @@ function createHeader(){
 // Resize header if the window size changes
 window.onresize = function(){createHeader();};
 
-function openTTD(num){
-	const menuContent = document.getElementById("menuContent");
-	const menuHidder = document.getElementById("closeMenu");
-	if(num != 0){ // open menu
-		menuContent.style.maxHeight = 0.75*screen.height + "px";
-		switch(num){
-			case 1:
-				menuContent.innerHTML = "<div id='imgHolders'>  <a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Attractions</a> \
-										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Restaurants</a> \
-										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Entertainment</a> \
-										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Museums & Art</a> \
-										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Casinos & Resorts</a> </div>";
-				break;
-			case 2:
-				menuContent.innerHTML = "<div id='imgHolders'>  <a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Places to Stay</a> \
-										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Aiports and Transit</a> \
-										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Rental Services</a> \
-										<a><img src='https://cdn-icons-png.flaticon.com/512/152/152520.png'>Visitor Guides</a> </div>";
-				break;
-			case 3:
-				menuContent.innerHTML = "<div id='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
-							<a class='headerCollapsible'>Plan Your Visit</a><div class='HCcontent'><a>Places to Stay</a> <a>Airport & Transit</a> <a>Rental Services</a> <a>Visitor Guides</a></div> <a>Information</a></div>";
-				miniMenuSetup();
-				break;
-		} // end of switch statement
+var menuIsClosed = 1;
 
-		menuHidder.style.display = 'block';
-		menuContent.style.display = 'block';
-		
-	}else { //close menu
-		menuContent.style.maxHeight = 0;
-		menuHidder.style.display = 'none';
-		setTimeout(function(){if(num==0){menuContent.style.display = "none";}},400);
-	}
-} // end of function openTTD()
+function openMenus(num){
+	const ttdMenu = document.getElementById("ttdMenu");
+	const pyvMenu = document.getElementById("pyvMenu");
+
+	switch(num){
+		case 0:
+			ttdMenu.style.maxHeight = '0';
+			pyvMenu.style.maxHeight = '0';
+			menuIsClosed = 1;
+			setTimeout(function(){if(menuIsClosed == 1){ttdMenu.style.display='none'; pyvMenu.style.display='none';}},400);
+			break;
+		case 1:
+			ttdMenu.style.display = 'block';
+			pyvMenu.style.display = 'none';
+			ttdMenu.style.maxHeight = '800px';
+			menuIsClosed = 0;
+			break;
+		case 2:
+			pyvMenu.style.display = 'block';
+			ttdMenu.style.display = 'none';
+			pyvMenu.style.maxHeight = '800px';
+			menuIsClosed = 0;
+			break;
+	}// end of switch
+	
+} // end of function openMenus()
 
 function createFooter(){
 	footer.innerHTML = "<div id='footerLinks'> 	<div><h4>Information</h4><a>Getting to Puertas Nuevas</a> <a>Visitor Guides</a> <a>Frequently Asked Questions</a> <a>Travel Updates</a></div> \
