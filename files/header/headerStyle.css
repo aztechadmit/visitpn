@@ -18,7 +18,7 @@
 		#headerContent a{align-self:stretch; padding:12px; transition:0.5s; text-align:center; font-size:20px; width:100%; color:black; text-decoration:none;}
 		#headerContent a:hover{background:darkcyan; color:white;}
 
-#menuContent{
+.menuContent{
 	position:fixed; width:90%; max-width:1000px; 			
    	background:#8A9AB1; border-radius:0 0 10px 10px;
     	top:140px; left:50%; transform: translate(-50%); padding-top:20px; 
@@ -29,19 +29,19 @@
 }
 	@media screen and (max-width:800px){
 		#headerContent{width:80%; border: 1px solid black;}
-		#menuContent{width:80%; overflow-y:scroll;}
+		.menuContent{width:80%; overflow-y:scroll;}
 	}
-	#menuContent #imgHolders {
+	.menuContent .imgHolders {
 		display:flex; flex-flow:row;
 	}
-	#menuContent #imgHolders a{
+	.menuContent .imgHolders a{
 		width:100%; text-decoration:none; font-size:19px; text-align:center; margin:0; padding:10px; align-self:stretch; transition:0.5s; padding-bottom:20px;
 		color:#B0C4D9;
 	}
-	#menuContent #imgHolders a:hover{
+	.menuContent .imgHolders a:hover{
 		background:silver;
 	}
-	#menuContent #imgHolders a img{
+	.menuContent .imgHolders a img{
 		width:60%; height:auto;
 		display:block; margin:auto; margin-bottom:10px;
 	}
@@ -49,11 +49,11 @@
 		position:fixed; top:0; left:0; right:0; bottom:0;
 		display:none; z-index:996;
 	}
-	#txtHolders a {
+	.txtHolders a {
 		display:block; width:100%; margin:0; padding:10px; text-decoration:none; font-size:18px; transition:0.5s;
 		text-align:left;
 	}
-	.HCactive, #txtHolders a:hover{
+	.HCactive, .txtHolders a:hover{
 		background:gray; color:white;
 	}
 
@@ -81,6 +81,7 @@
 	#footerLinks{
 		width:100%; max-width:1200px; padding:0; margin:auto;
 		display:flex; flex-flow:row;
+		margin-bottom:25px;
 	}
 	#footerLinks div{width:100%; text-align:left; padding-right:15px; margin:0;}
 	#footerLinks div a{text-decoration:none; display:block; margin-bottom:10px;} #footerLinks div a:hover{text-decoration:underline;}
