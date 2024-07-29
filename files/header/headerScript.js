@@ -26,20 +26,20 @@ function createHeader(){
 										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png'>Museums & Art</a> \
 										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png'>Casinos & Resorts</a> </div>";
 		const pyvMenu = document.getElementById("pyvMenu");
-		pyvMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png'>Places to Stay</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png'>Aiports and Transit</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png'>Rental Services</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png'>Visitor Guides</a> </div>";
+		pyvMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon(6).png'>Places to Stay</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(7).png'>Aiports and Transit</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(8).png'>Rental Services</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(10).png'>Visitor Guides</a> </div>";
 		
 	}else{				// Small Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
 							<div id='headerContent'><a onmouseover='miniMenus(1)' id='menDispTxt'>Menu</a></div> <div class='menuContent' id='allMenu'></div> <div id='closeMenu' onmouseover='miniMenus(0)'></div> </div>";
 		const allMenu = document.getElementById("allMenu");
-		allMenu.innerHTML = "<div id='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
+		allMenu.innerHTML = "<div class='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
 							<a class='headerCollapsible'>Plan Your Visit</a><div class='HCcontent'><a>Places to Stay</a> <a>Airport & Transit</a> <a>Rental Services</a> <a>Visitor Guides</a></div> <a>Information</a></div>";
 		screenSize = 'small';
 
-		var coll = document.getElementsByClassName("collapsible");
+		var coll = document.getElementsByClassName("headerCollapsible");
 		var i;
 		
 		for (i = 0; i < coll.length; i++) {
