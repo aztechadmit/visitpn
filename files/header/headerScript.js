@@ -21,15 +21,15 @@ function createHeader(){
 		
 		const ttdMenu = document.getElementById("ttdMenu");
 		ttdMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon.png'>Attractions</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png.png'>Restaurants</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png'>Restaurants</a> \
 										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png'>Sports & Entertainment</a> \
 										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png'>Museums & Art</a> \
 										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png'>Casinos & Resorts</a> </div>";
 		const pyvMenu = document.getElementById("pyvMenu");
-		pyvMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png.png'>Places to Stay</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png.png'>Aiports and Transit</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png.png'>Rental Services</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png.png'>Visitor Guides</a> </div>";
+		pyvMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png'>Places to Stay</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png'>Aiports and Transit</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png'>Rental Services</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png'>Visitor Guides</a> </div>";
 		
 	}else{				// Small Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
