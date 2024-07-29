@@ -33,7 +33,7 @@ function createHeader(){
 		
 	}else{				// Small Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
-							<div id='headerContent'><a onmouseover='miniMenus(1)'>Menu</a></div> <div class='menuContent' id='allMenu'></div> <div id='closeMenu' onmouseover='miniMenus(0)'></div> </div>";
+							<div id='headerContent'><a onmouseover='miniMenus(1)' id='menDispTxt'>Menu</a></div> <div class='menuContent' id='allMenu'></div> <div id='closeMenu' onmouseover='miniMenus(0)'></div> </div>";
 		const allMenu = document.getElementById("allMenu");
 		allMenu.innerHTML = "<div id='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
 							<a class='headerCollapsible'>Plan Your Visit</a><div class='HCcontent'><a>Places to Stay</a> <a>Airport & Transit</a> <a>Rental Services</a> <a>Visitor Guides</a></div> <a>Information</a></div>";
@@ -67,24 +67,26 @@ var menuIsClosed = 1;
 function openMenus(num){
 	const ttdMenu = document.getElementById("ttdMenu");
 	const pyvMenu = document.getElementById("pyvMenu");
+	const closeMenu = document.getElementById("closeMenu");
 
 	switch(num){
 		case 0:
 			ttdMenu.style.maxHeight = '0';
 			pyvMenu.style.maxHeight = '0';
+			closeMenu.style.display = 'none';
 			menuIsClosed = 1;
 			setTimeout(function(){if(menuIsClosed == 1){ttdMenu.style.display='none'; pyvMenu.style.display='none';}},400);
 			break;
 		case 1:
 			ttdMenu.style.display = 'block';
 			pyvMenu.style.display = 'none';
-			setTimeout(function(){ttdMenu.style.maxHeight = '800px';},10);
+			setTimeout(function(){ttdMenu.style.maxHeight = '800px'; closeMenu.style.display = 'block';},10);
 			menuIsClosed = 0;
 			break;
 		case 2:
 			pyvMenu.style.display = 'block';
 			ttdMenu.style.display = 'none';
-			setTimeout(function(){pyvMenu.style.maxHeight = '800px';},10);
+			setTimeout(function(){pyvMenu.style.maxHeight = '800px'; closeMenu.style.display = 'block';},10);
 			menuIsClosed = 0;
 			break;
 	}// end of switch
@@ -93,11 +95,14 @@ function openMenus(num){
 
 function miniMenus(num){
 	const allMenu = document.getElementById("allMenu");
+	const menDispTxt = document.getElementById("menDispTxt");
 	switch(num){
 		case 0:
+			menDispTxt.innerHTML = "Menu";
 			allMenu.style.display = 'none';		
 			break;
 		case 1:
+			menDispTxt.innerHTML = "Close menu";
 			allMenu.style.display = 'block';
 			allMenu.style.maxHeight = 0.60*window.innerHeight + "px";
 			break;
