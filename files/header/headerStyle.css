@@ -25,10 +25,11 @@
 	border: 1px solid black;
 
 	display:none; max-height:0; transition:max-height 0.4s;
+	overflow-y:hidden;
 }
 	@media screen and (max-width:800px){
 		#headerContent{width:80%; border: 1px solid black;}
-		.menuContent{width:80%; overflow-y:scroll;}
+		.menuContent{width:80%; overflow-y:auto;}
 	}
 	.menuContent .imgHolders {
 		display:flex; flex-flow:row;
