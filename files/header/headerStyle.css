@@ -23,9 +23,8 @@
    	background:#8A9AB1; border-radius:0 0 10px 10px;
     	top:140px; left:50%; transform: translate(-50%); padding-top:20px; 
 	border: 1px solid black;
-	transition: max-height 0.4s ease-out;
-	overflow-x:hidden; overflow-y:hidden;
-	display:none; z-index:997;
+
+	display:none; max-height:0; transition:max-height 0.4s;
 }
 	@media screen and (max-width:800px){
 		#headerContent{width:80%; border: 1px solid black;}
