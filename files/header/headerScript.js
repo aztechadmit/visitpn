@@ -131,7 +131,7 @@ function populateDocHead(){
 	document.head.innerHTML += '<link rel="icon" type="image/x-icon" href="https://aztechadmit.github.io/visitpn/files/images/webfavicon.ico"> \
 					<link rel="stylesheet" href="https://aztechadmit.github.io/visitpn/files/styleSheet.css"> \
 	 				<link rel="stylesheet" href="https://aztechadmit.github.io/visitpn/files/header/headerStyle.css"> \
-					<link href="https://fonts.googleapis.com/css?family=Akatab" rel="stylesheet">';
+					<link href="https://fonts.googleapis.com/css?family=Akatab|Anuphan" rel="stylesheet">';
 }
 
 function miniMenuSetup(){
