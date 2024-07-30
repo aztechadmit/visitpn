@@ -13,6 +13,7 @@ function endPageLoad(){
 }// end of function endPageLoad()
 
 function createHeader(){
+	populateDocHead();
 	if(window.innerWidth > 800){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'> \
 							<div id='headerContent'><a  onmouseover='openMenus(0)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openMenus(1)'>Things to Do</a> <a  onmouseover='openMenus(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openMenus(0)'>Information</a></div> \
@@ -124,6 +125,14 @@ function createFooter(){
 	footer.innerHTML += "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
 	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism</p><p><a>Legal Information</a> | <a>Business</a> | <a>MCBPO</a></p>";
 }// end of function createFooter()
+
+function populateDocHead(){
+	console.log("populating head");
+	document.head.innerHTML += '<link rel="icon" type="image/x-icon" href="https://aztechadmit.github.io/visitpn/files/images/webfavicon.ico"> \
+					<link rel="stylesheet" href="https://aztechadmit.github.io/visitpn/files/styleSheet.css"> \
+	 				<link rel="stylesheet" href="https://aztechadmit.github.io/visitpn/files/header/headerStyle.css"> \
+					<link href="https://fonts.googleapis.com/css?family=Akatab" rel="stylesheet">';
+}
 
 function miniMenuSetup(){
 	// For Collapsible Menus:
