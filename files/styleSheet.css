@@ -54,6 +54,13 @@ a {color:inherit;}
 
 .fullContainer {width:100%; background:silver; margin:20px 0 20px 0; padding:10px;}
 
+/* -- DECORATIVE ELEMENTS -- */
+
+.porthole{width:100%; display:flex; flex-wrap:wrap; justify-content:center;}
+	.porthole a{width:25%; max-width:300px; min-width:100px; padding:10px; margin:10px auto 10px auto; align-self:stretch;}
+	.porthole a img{display:block; width:90%; height:auto; border-radius:20px; margin-bottom:20px; object-fit:cover; transition:0.4s;}
+	.porthole a:hover img{scale:1.05;}
+
 
 
 
