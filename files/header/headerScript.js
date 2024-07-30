@@ -7,13 +7,15 @@ const linkHead = "https://aztechadmit.github.io/visitpn/";
 var screenSize = '';
 var menuOpen = 'none';
 
+var headLoaded = 0;
+
 function endPageLoad(){
 	loader.style.opacity = 0;
 	setTimeout(function(){loader.style.display='none'},1000);
 }// end of function endPageLoad()
 
 function createHeader(){
-	populateDocHead();
+	if(headLoaded != 1){populateDocHead(); headLoaded = 1;}
 	if(window.innerWidth > 800){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'> \
 							<div id='headerContent'><a  onmouseover='openMenus(0)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openMenus(1)'>Things to Do</a> <a  onmouseover='openMenus(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openMenus(0)'>Information</a></div> \
@@ -127,7 +129,7 @@ function createFooter(){
 }// end of function createFooter()
 
 function populateDocHead(){
-	console.log("populating head");
+	console.log("populating head (" + headLoaded + ")");
 	document.head.innerHTML += '<link rel="icon" type="image/x-icon" href="https://aztechadmit.github.io/visitpn/files/images/webfavicon.ico"> \
 					<link rel="stylesheet" href="https://aztechadmit.github.io/visitpn/files/styleSheet.css"> \
 	 				<link rel="stylesheet" href="https://aztechadmit.github.io/visitpn/files/header/headerStyle.css"> \
