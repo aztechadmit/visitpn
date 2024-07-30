@@ -15,6 +15,9 @@ function endPageLoad(){
 }// end of function endPageLoad()
 
 function createHeader(){
+	//Populate loader:
+	document.getElementById("loader").innerHTML = "<img src='"+linkHead+"files/images/webfavicon.ico'>";
+	
 	if(headLoaded != 1){populateDocHead(); headLoaded = 1;}
 	if(window.innerWidth > 800){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'> \
