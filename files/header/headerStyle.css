@@ -93,3 +93,23 @@
 		display:block; height:140px; width:auto; margin:auto;
 		object-fit:cover; cursor:pointer;
 	}
+
+#loader{
+	transition:opacity 0.5s;
+	opacity:1;
+
+	position:fixed; top:0; left:0; right:0; bottom:0;
+	background:linear-gradient(45deg,midnightblue,darkblue);
+	z-index:994; display:flex; align-items:center; justify-content:center;
+}
+	#loader img{
+		width:100%; height:auto;
+		max-width:300px;
+		animation:breathe 4s ease-in-out infinite;
+	}
+	@keyframes breathe {
+	 	0% {scale:1;}
+		50% {scale:1.5;}
+		100% {scale:1;}
+	}
+
