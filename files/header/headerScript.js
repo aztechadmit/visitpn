@@ -11,7 +11,7 @@ var headLoaded = 0;
 
 function endPageLoad(){
 	loader.style.opacity = 0;
-	setTimeout(function(){loader.style.display='none'},1000);
+	setTimeout(function(){loader.style.display='none'},500);
 }// end of function endPageLoad()
 
 function createHeader(){
