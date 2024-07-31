@@ -46,6 +46,7 @@ a {color:inherit; transition:0.4s;}
 /* -- TEXT AND CONTENT ELEMENTS -- */
 
 .container{width:100%; max-width:1100px; padding:10px; margin:20px auto 20px auto; border-radius:20px;}
+.container.center{text-align:center;}
 
 .columnContainer{display:flex; width:100%; margin:0 -10px 0 -10px; padding:0; flex-flow:row;}
 	.columnContainer img{margin:10px; width:40%; align-self:stretch; object-fit:cover; border-radius:20px;}
