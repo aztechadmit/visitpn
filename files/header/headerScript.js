@@ -129,7 +129,9 @@ function createFooter(){
 							<div><h4>Business Opportunities</h4> <a>Filming in PN</a> <a>Corporate Events</a> <a>Long-Term Visitors</a> </div> </div>";
 	footer.innerHTML += "<div class='spacer'></div>";
 	footer.innerHTML += "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
-	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism</p><p><a>Legal Information</a> | <a>Business</a> | <a>MCBPO</a></p>";
+	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism & Hospitality</p> \
+				<p style='color:midnightblue'><b>(311) 045 1000</b> &#183; <a href='mailto:reuvenmine@gmail.com'>dth-pnmr@pn.gov</a></p> \
+				<p><a>Legal Information</a> | <a>Business</a> | <a>MCBPO</a></p>";
 }// end of function createFooter()
 
 function populateDocHead(){
