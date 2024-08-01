@@ -71,7 +71,7 @@ a {color:inherit; transition:0.4s;}
 	display:flex; flex-flow:row; flex-wrap:wrap;
 	align-items:flex-start; justify-content:center;
 }
-	.iconContainer a{width:110px; text-align:center; margin:0; padding:12px; transition:0.5s;}
+	.iconContainer a{width:110px; text-align:center; margin:0; padding:12px; transition:0.5s; text-decoration:none;}
 	.iconContainer a img{width:100%; height:auto; transition:0.5s;} 
 	.iconContainer a h3{font-weight:normal; font-size:15px; color:midnightblue; margin:5px 0 0 0;}
 	.iconContainer a:hover img{scale:1.05;}
