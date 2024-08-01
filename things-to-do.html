@@ -105,7 +105,30 @@
 				}
 
 			// LOAD IN ATTRACTION TILES
-			
+			const resultsSection = document.getElementById("resultsSection");
+			resultsSection.innerHTML = "";
+			var i=1; var resultCount = 0;
+			while(i < attractions.length){
+				var temp = attractions[i].split(" | "); // temp[i] = 0name 1location 2category 3description 4link 5image
+				if(temp[2] == searchCategory || searchCategory == "none"){
+					if(temp[1] == searchLocation || searchLocation == "none"){
+						resultsSection.innerHTML += "<a class='tile' id='tileNum-"+i+"' href='pages/"+temp[4]+"'><img src='"+temp[5]+"'><div><h4>"+temp[0]+"</h4><p class='subtext'>"+temp[1]+" - <em>"+temp[2]+"</em></p><p>"+temp[3]+"</p>";
+						resultCount += 1;
+					}else{
+						console.log("Skipped attraction item: " + temp[0] + " because of location");
+					}
+				}else{
+					console.log("Skipped attraction item: " + temp[0] + " because of category");
+				}
+				i += 1;
+			}
+			const resultsDisplay = document.getElementById("resultsDisplay");
+			if(resultCount != 0){
+				resultsDisplay.innerHTML = "<span style='font-weight:normal'>Showing </span> "+resultCount+" <span style='font-weight:normal'>results</span>";
+			}else{
+				resultsDisplay.innerHTML = "Error loading content, please check search parameters and reload the page.";
+			}
+			// end of attraction tile creation
 			
 		} // end of function initiatePage
 	</script>
