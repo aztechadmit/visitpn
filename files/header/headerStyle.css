@@ -10,7 +10,7 @@
 	}
 	#headerLogo:hover{scale:1.05;}
 	#headerContent {
-		position:fixed; width:90%; max-width:1000px; border-radius:10px; top:94px;left: 50%; 
+		position:fixed; width:90%; max-width:1100px; border-radius:10px; top:94px;left: 50%; 
 	    	background:#B0C4D9; height:56px; 
 		transform: translate(-50%); display:flex; overflow:hidden; flex-flow:row;
 		z-index:999;
@@ -19,7 +19,7 @@
 		#headerContent a:hover{background:darkcyan; color:white;}
 
 .menuContent{
-	position:fixed; width:90%; max-width:1000px; 			
+	position:fixed; width:90%; max-width:1100px; 			
    	background:#8A9AB1; border-radius:0 0 10px 10px;
     	top:140px; left:50%; transform: translate(-50%); padding-top:20px; 
 	border: 1px solid black;
