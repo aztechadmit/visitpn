@@ -64,7 +64,7 @@
 				searchCategory = "none"; // Category is not specified
 			}
 	
-			if(urlParams.has("category")){
+			if(urlParams.has("location")){
 				var temp = urlParams.get("location"); // Will return an integer number with the location index
 				searchLocation = locations[temp];
 				console.log("Search Category: " + searchLocation);
@@ -91,9 +91,9 @@
 				while(i < locations.length){
 					var temp = locations[i];
 					if(temp == searchLocation){
-						locationContainer.innerHTML += "<a style='font-weight:bold'>"+locations[i]+"</a> &#183;";
+						locationContainer.innerHTML += "<a style='font-weight:bold'>"+locations[i]+"</a> &#183; ";
 					}else{
-						locationContainer.innerHTML += "<a href='things-to-do?location="+i+"'>"+locations[i]+"</a> &#183;";
+						locationContainer.innerHTML += "<a style='text-decoration:none' href='things-to-do?location="+i+"'>"+locations[i]+"</a> &#183; ";
 					}
 					i += 1;
 				}
