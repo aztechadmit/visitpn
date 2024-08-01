@@ -21,16 +21,16 @@ function createHeader(){
 	if(headLoaded != 1){populateDocHead(); headLoaded = 1;}
 	if(window.innerWidth > 800){ 	// Large Window
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'> \
-							<div id='headerContent'><a  onmouseover='openMenus(0)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openMenus(1)'>Things to Do</a> <a  onmouseover='openMenus(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openMenus(0)'>Information</a></div> \
+							<div id='headerContent'><a  onmouseover='openMenus(0)' href='"+linkHead+"places-to-visit'>Places to Visit</a> <a onmouseover='openMenus(1)' href='"+linkHead+"things-to-do'>Things to Do</a> <a  onmouseover='openMenus(2)' >Plan Your Visit</a> <a href='"+linkHead+"information'  onmouseover='openMenus(0)'>Information</a></div> \
 							<div class='menuContent' id='ttdMenu'></div> <div class='menuContent' id='pyvMenu'></div> <div id='closeMenu' onmouseover='openMenus(0)'></div> </div>";
 		screenSize = 'large';
 		
 		const ttdMenu = document.getElementById("ttdMenu");
-		ttdMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon.png'>Attractions</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png'>Restaurants</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png'>Sports & Entertainment</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png'>Museums & Art</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png'>Casinos & Resorts</a> </div>";
+		ttdMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon.png' href='"+linkHead+"things-to-do?category=1'>Attractions</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png' href='"+linkHead+"things-to-do?category=3'>Restaurants</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png' href='"+linkHead+"things-to-do?category=5'>Entertainment</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png' href='"+linkHead+"things-to-do?category=7'>Museums</a> \
+										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png' href='"+linkHead+"things-to-do'>View All</a> </div>";
 		const pyvMenu = document.getElementById("pyvMenu");
 		pyvMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon(6).png'>Places to Stay</a> \
 										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(7).png'>Aiports and Transit</a> \
@@ -41,7 +41,7 @@ function createHeader(){
 		header.innerHTML = "<div id='headerBar'> <img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='headerLogo' onclick='window.open("+'"'+linkHead+'"'+")'> \
 							<div id='headerContent'><a onclick='miniMenus()' style='cursor:pointer' id='menDispTxt'>Menu</a></div> <div class='menuContent' id='allMenu'></div> <div id='closeMenu' onmouseover='miniMenus()'></div> </div>";
 		const allMenu = document.getElementById("allMenu");
-		allMenu.innerHTML = "<div class='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a>Attractions</a><a>Restaurants</a><a>Entertainment</a><a>Museums</a><a>Casinos & Resort</a> </div>\
+		allMenu.innerHTML = "<div class='txtHolders'> <a>Places to Visit</a> <a class='headerCollapsible'>Things to Do</a><div class='HCcontent'> <a href='"+linkHead+"things-to-do'>View All</a><a href='"+linkHead+"things-to-do?category=1'>Attractions</a><a href='"+linkHead+"things-to-do?category=3'>Restaurants</a><a href='"+linkHead+"things-to-do?category=5'>Entertainment</a><a href='"+linkHead+"things-to-do?category=7'>Museums & Galleries</a> </div>\
 							<a class='headerCollapsible'>Plan Your Visit</a><div class='HCcontent'><a>Places to Stay</a> <a>Airport & Transit</a> <a>Rental Services</a> <a>Visitor Guides</a></div> <a>Information</a></div>";
 		screenSize = 'small';
 
