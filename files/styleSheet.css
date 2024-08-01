@@ -67,6 +67,17 @@ a {color:inherit; transition:0.4s;}
 	.porthole a img{display:block; width:90%; height:auto; border-radius:20px; margin:0 auto 20px auto; object-fit:cover; transition:0.4s;}
 	.porthole a:hover img{scale:1.05;}
 
+.iconContainer{
+	display:flex; flex-flow:row; flex-wrap:wrap;
+	align-items:flex-start; justify-content:center;
+}
+	.iconContainer a{width:110px; text-align:center; margin:0; padding:12px; transition:0.5s;}
+	.iconContainer a img{width:100%; height:auto; transition:0.5s;} 
+	.iconContainer a h3{font-weight:normal; font-size:15px; color:midnightblue; margin:5px 0 0 0;}
+	.iconContainer a:hover img{scale:1.05;}
+	.iconContainer a.active{background:#efefef; border-radius:20px;}
+	.iconContainer a.active h3{font-weight:bold;}
+
 
 
 
