@@ -22,7 +22,7 @@
 
 		<!-- BODY CONTENT -->
 		<br>
-		<div class='container center' style='background:#efefef;'>
+		<div class='container center' style='background:silver;'>
 			<h1>Things to Do</h1>
 			<div class='iconContainer' id='filterContainer'>
 				<a><img src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(3).png'><h3>Site Seeing</h3></a>
@@ -56,7 +56,7 @@
 
 		function initiatePage(){
 
-			if(urlParams.has("category"){
+			if(urlParams.has("category")){
 				var temp = urlParams.get("category"); // Will return an integer number with the category index
 				searchCategory = categories[temp];
 				console.log("Search Category: " + searchCategory);
@@ -64,7 +64,7 @@
 				searchCategory = "none"; // Category is not specified
 			}
 	
-			if(urlParams.has("category"){
+			if(urlParams.has("category")){
 				var temp = urlParams.get("location"); // Will return an integer number with the location index
 				searchLocation = locations[temp];
 				console.log("Search Category: " + searchLocation);
@@ -79,14 +79,24 @@
 				while(i < categories.length){
 					var temp = categories[i];
 					if(temp == searchCategory){
-						filterContainer.innerHTML += "<a class='active'><img src='images/menuIcons/"+categoryImg[i]+"'><h3>"+temp+"</h3></a>";
+						filterContainer.innerHTML += "<a class='active'><img src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/"+categoryImg[i]+"'><h3>"+temp+"</h3></a>";
 					}else{
-						filterContainer.innerHTML += "<a href='things-to-do?category="+i+"'><img src='images/menuIcons/"+categoryImg[i]+"'><h3>"+temp+"</h3></a>";
+						filterContainer.innerHTML += "<a href='things-to-do?category="+i+"'><img src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/"+categoryImg[i]+"'><h3>"+temp+"</h3></a>";
 					}
 					i += 1;
 				}
 			const locationContainer = document.getElementById("locationContainer");
-				locationContainer.innerHTML = "<h4 style='display:inline-block'>Search by Location: </h4>";
+				locationContainer.innerHTML = "<h4 style='display:inline-block'>Search by Location: </h4> ";
+				var i=0;
+				while(i < locations.length){
+					var temp = locations[i];
+					if(temp == searchLocation){
+						locationContainer.innerHTML = "<a style='font-weight:bold'>"+locations[i]+"</a> &#183;";
+					}else{
+						locationContainer.innerHTML = "<a href='things-to-do?location="+i+"'>"+locations[i]+"</a> &#183;";
+					}
+					i += 1;
+				}
 			
 		} // end of function initiatePage
 	</script>
