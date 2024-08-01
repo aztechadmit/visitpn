@@ -91,7 +91,7 @@
 	}
 	#footerLogo{
 		display:block; height:140px; width:auto; margin:auto;
-		object-fit:cover; cursor:pointer;
+		object-fit:cover; 
 	}
 
 #loader{
