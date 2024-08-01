@@ -26,11 +26,11 @@ function createHeader(){
 		screenSize = 'large';
 		
 		const ttdMenu = document.getElementById("ttdMenu");
-		ttdMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon.png' href='"+linkHead+"things-to-do?category=1'>Attractions</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png' href='"+linkHead+"things-to-do?category=3'>Restaurants</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png' href='"+linkHead+"things-to-do?category=5'>Entertainment</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png' href='"+linkHead+"things-to-do?category=7'>Museums</a> \
-										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png' href='"+linkHead+"things-to-do'>View All</a> </div>";
+		ttdMenu.innerHTML = "<div class='imgHolders'>  <a href='"+linkHead+"things-to-do?category=1'><img src='"+linkHead+"files/images/menuIcons/menuIcon.png'>Attractions</a> \
+										<a href='"+linkHead+"things-to-do?category=3'><img src='"+linkHead+"files/images/menuIcons/menuIcon(1).png'>Restaurants</a> \
+										<a href='"+linkHead+"things-to-do?category=5'><img src='"+linkHead+"files/images/menuIcons/menuIcon(3).png'>Entertainment</a> \
+										<a href='"+linkHead+"things-to-do?category=7'><img src='"+linkHead+"files/images/menuIcons/menuIcon(4).png'>Museums</a> \
+										<a href='"+linkHead+"things-to-do'><img src='"+linkHead+"files/images/menuIcons/menuIcon(5).png'>View All</a> </div>";
 		const pyvMenu = document.getElementById("pyvMenu");
 		pyvMenu.innerHTML = "<div class='imgHolders'>  <a><img src='"+linkHead+"files/images/menuIcons/menuIcon(6).png'>Places to Stay</a> \
 										<a><img src='"+linkHead+"files/images/menuIcons/menuIcon(7).png'>Aiports and Transit</a> \
