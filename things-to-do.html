@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+	<!-- Placeholder image: https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg -->
+
+	<head>
+		<meta charset="utf-8"> 	<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<!-- TAB TITLE OF PAGE ---------------------------------------------------------------------------------------------------------------------->
+		<title>Things to Do | Visit Puertas Nuevas</title>
+		<meta name="author" content="author_name"> <!-- default: PN Department of Tourism -->
+		<meta name="description" content="page_description">
+		
+		<style>
+			
+		</style>
+
+	</head>
+
+	<body onload='endPageLoad()'>
+		<!-- header contents --> <div id='header'></div><div id='loader'></div>
+
+		<!-- BODY CONTENT -->
+		<br>
+		<div class='container center' style='background:#efefef;'>
+			<h1>Things to Do</h1>
+			<div class='iconContainer' id='filterContainer'>
+				<a><img src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(3).png'><h3>Site Seeing</h3></a>
+				<a><img src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(11).png'><h3>Entertainment</h3></a>
+				<a><img src='https://aztechadmit.github.io/visitpn/files/images/menuIcons/menuIcon(6).png'><h3>Site Seeing</h3></a>
+			</div>
+			<p>Click an icon above to sort by category or <a href='things-to-do?category=0'>Reset Sorting</a></p>
+			<p id='locationContainer'>Search by Location: --</p>
+		</div>
+
+		<div class='container center'>
+			<h4 id='resultsDisplay'>Error loading content, please check search parameters and reload the page.</h4>
+			<div class='tileContainer' id='resultsSection'>
+				
+			</div>
+		</div>
+		
+		<div id='footer'></div>
+	</body> <!-- end of page body -->
+
+	<!-- CREATE THE HEADER AND FOOTER -->
+	<script type='text/javascript'src='https://aztechadmit.github.io/visitpn/files/header/headerScript.js'></script>
+	<script>createHeader();</script>
+
+	<script type='text/javascript'src='https://aztechadmit.github.io/visitpn/files/repositories/attractions.js'></script>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+
+		var searchCategory;
+		var searchLocation;
+
+		function initiatePage(){
+
+			if(urlParams.has("category"){
+				var temp = urlParams.get("category"); // Will return an integer number with the category index
+				searchCategory = categories[temp];
+				console.log("Search Category: " + searchCategory);
+			}else{
+				searchCategory = "none"; // Category is not specified
+			}
+	
+			if(urlParams.has("category"){
+				var temp = urlParams.get("location"); // Will return an integer number with the location index
+				searchLocation = locations[temp];
+				console.log("Search Category: " + searchLocation);
+			}else{
+				searchLocation = "none"; // Category is not specified
+			} // end of parameter identification
+
+			// SET-UP SEARCH BUTTONS
+			const filterContainer = document.getElementById("filterContainer");
+				filterContainer.innerHTML = "";
+				var i=1;
+				while(i < categories.length){
+					var temp = categories[i];
+					if(temp == searchCategory){
+						filterContainer.innerHTML += "<a class='active'><img src='images/menuIcons/"+categoryImg[i]+"'><h3>"+temp+"</h3></a>";
+					}else{
+						filterContainer.innerHTML += "<a href='things-to-do?category="+i+"'><img src='images/menuIcons/"+categoryImg[i]+"'><h3>"+temp+"</h3></a>";
+					}
+					i += 1;
+				}
+			const locationContainer = document.getElementById("locationContainer");
+				locationContainer.innerHTML = "<h4 style='display:inline-block'>Search by Location: </h4>";
+			
+		} // end of function initiatePage
+	</script>
+	<script>
+		initiatePage();
+	</script>
+	
+</html>
+  
