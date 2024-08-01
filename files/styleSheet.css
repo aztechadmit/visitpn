@@ -62,6 +62,14 @@ a {color:inherit; transition:0.4s;}
 
 .fullContainer {width:100%; background:silver; margin:20px 0 20px 0; padding:10px;}
 
+.tileContainer{display:flex; flex-wrap:wrap; flex-flow:row; justify-content:center;}
+	.tileContainer .tile{display:block; width:100%; max-width:300px; margin:10px; padding:0; border-radius:20px; border:1px solid black; align-self:stretch; transition:0.5s; text-decoration:none;}
+		.tileContainer .tile:hover{scale:1.01; background:#efefef;}
+		.tileContainer .tile img{margin:0 0 0 0; width:100%; border-radius:19px;}
+		.tileContainer .tile div{padding:10px; text-align:left;}
+			.tileContainer .tile div h4{margin:0;} 
+			.tileContainer .tile div .subtext{margin:5px 0 0 0; color:gray;}
+
 /* -- DECORATIVE ELEMENTS -- */
 
 .porthole{width:100%; display:flex; flex-wrap:wrap; justify-content:center;}
