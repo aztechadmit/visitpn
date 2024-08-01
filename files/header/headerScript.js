@@ -125,10 +125,10 @@ function miniMenus(){
 function createFooter(){
 	footer.innerHTML = "<div id='footerLinks'> 	<div><h4>Information</h4><a>Getting to Puertas Nuevas</a> <a>Visitor Guides</a> <a>Frequently Asked Questions</a> <a>Travel Updates</a></div> \
 							<div><h4>Plan Your Visit</h4> <a>Transportation</a> <a>Rental Services</a> <a>Hotels & Lodging</a> <a>Destination Events</a> </div> \
-							<div><h4>Explore PN</h4> <a>Things to Do</a> <a>Events & Festivals</a> <a>Attractions</a> <a>Casinos & Resorts</a> <a>Museums & History</a> <a>Art & Culture</a> </div> \
+							<div><h4>Explore PN</h4> <a href='"+linkHead+"things-to-do'>Things to Do</a> <a>Events & Festivals</a> <a href='"+linkHead+"things-to-do?category=1'>Attractions</a> <a href='"+linkHead+"things-to-do?category=3'>Restaurants</a> <a href='"+linkHead+"things-to-do?category=7'>Sports & Recreation</a> <a href='"+linkHead+"things-to-do?category=4'>Shopping & Snacking</a> </div> \
 							<div><h4>Business Opportunities</h4> <a href='"+linkHead+"business/filmpn'>Filming in PN</a> <a>Corporate Events</a> <a>Long-Term Visitors</a> </div> </div>";
 	footer.innerHTML += "<div class='spacer'></div>";
-	footer.innerHTML += "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo' onclick='window.open("+'"'+linkHead+'", "_self"'+")'>";
+	footer.innerHTML += "<img src='"+linkHead+"files/images/puertasNuevasLogoII.png' id='footerLogo'>";
 	footer.innerHTML += "<p>&#169; 2024 Puertas Nuevas Ministry of Recreation | Department of Tourism & Hospitality</p> \
 				<p style='color:midnightblue'><b>(311) 045 1000</b> &#183; <a href='mailto:reuvenmine@gmail.com'>dth-pnmr@pn.gov</a></p> \
 				<p><a>Legal Information</a> | <a>Business</a> | <a href='"+linkHead+"business/mcbpo'>MCBPO</a></p>";
