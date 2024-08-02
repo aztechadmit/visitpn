@@ -7,11 +7,19 @@
 		<meta charset="utf-8"> 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<!-- TAB TITLE OF PAGE ---------------------------------------------------------------------------------------------------------------------->
-		<title>attraction_name | Visit Puertas Nuevas</title>
+		<title id='attractionName'>Attraction Page | Visit Puertas Nuevas</title>
 		<meta name="author" content="PN Department of Tourism"> <!-- default: PN Department of Tourism -->
 		<meta name="description" content="A page highlighting an attraction of Puertas Nuevas">
 		
-		<style></style>
+		<style>
+			#dispLocation{color:gray; font-style: italic; margin:0;}
+			#dispName{margin:0 0 5px 0;}
+			
+			#dispImages{display:flex; flex-flow:row; justify-content:center;}
+			#dispImages img{max-width:300px; align-self:stretch; border-radius:20px; object-fit:cover; margin:auto;}
+
+			#dispButtons a.btn{margin:10px;}
+		</style>
 
 	</head>
 
@@ -19,16 +27,34 @@
 		<!-- header contents --> <div id='header'></div><div id='loader'></div>
 
 		<!-- BODY CONTENT -->
-		<div class='imgSpacer'>
+		<br>
+		<div class='container' style='background:lightgray;'>
+			<div class='columnContainer'>
+				<img src='https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg' id='dispImageMain'>
+				<div style='align-self:stretch'>
+					<h1 class='blue' id='dispName'>Attraction Name</h1>
+					<h4 id='dispLocation'>Attraction Location</h4>
+					<p id='dispIntro'>This is where you will find a short description of the attraction to lure readers into exploring more of this page and learning more about the great Puertas Nuevas attractions.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class='container' id='dispFurtherReading'>
+			This is where there will be some more information about the attraction such as a brief history, things to look forward to, advice on getting to it, and more wonderful informations!
+		</div>
+
+		<div class='spacer'></div>
+
+		<div class='container' id='dispImages'>
+			<img src='https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg'>
+			<img src='https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg'>
 			<img src='https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg'>
 		</div>
 
-		<div class='container center'>
-			<h2>This Page is Under Construction</h2>
-			Our team is hard at work bringing you a bigger and better experience. Thank you for your patience, and happy exploring!
-			<br>
-			<p><a class='btn' onclick='history.back()' style='cursor:pointer'>Back to Previous</a></p>
-			
+		<div class='spacer'></div>
+
+		<div class='container center' id='dispButtons'>
+			<a class='btn'>Explore Category <em>Category</em></a> <a class='btn'>Explore Other Items in <em>Location</em></a> <a class='btn' onclick='history.back()'>Back to Previous</a>
 		</div>
 
 		<br><br>
