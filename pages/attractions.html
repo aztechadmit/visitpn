@@ -102,12 +102,18 @@
 
 			// Page introduction
 			document.getElementById("pageTitle").innerHTML = $headerInfo[0] + " | Visit Puertas Nuevas";
-			contentHolder.innerHTML = "<div class='container' style='background:lightgray;'><div class='columnContainer'> \
+			contentHolder.innerHTML = "<div class='container' style='background:#efefef;'><div class='columnContainer'> \
 							<img src='" + $images[0] + "'><div style='align-self:stretch'><h1 class='blue' id='dispName'>" + $headerInfo[0] + "</h1><h4 id='dispLocation'>"+ $headerInfo[2] +"</h4> \
 							<p id='dispIntro'>" + attractionSummary[index] +"</p></div></div></div>";
 
 			// Main content
-			contentHolder.innerHTML += "<div class='container' id='dispFurtherReading'>" + attractionDescription[index] + "</div><div class='spacer'></div>";
+			contentHolder.innerHTML += "<div class='container' id='dispFurtherReading'>" + attractionDescription[index] + "</div>";
+
+			if(attractionHighlight[index] != 'nan'){
+				contentHolder.innerHTML += "<div class='container' style='background:#efefef'>" + attractionHighlight[index] + "</div>";
+			}else{
+				contentHolder.innerHTML += "<div class='spacer'></div>
+			}
 
 			if($images[1] != 'nan'){
 				tempString = "<div class='container' id='dispImages'>";
