@@ -87,14 +87,14 @@ e<!DOCTYPE html>
 			if(index==0){
 				window.location.replace('redirect');
 			}else{
-				populatePage();
+				populatePage(index);
 			}
 			
 		}else{
 			window.location.replace('../attractions-error-page');
 		}
 
-		function populatePage(){
+		function populatePage(index){
 			$images = attractionImages[index].split(" | ");
 			$headerInfo = attractionInfo[index].split(" | ");
 
