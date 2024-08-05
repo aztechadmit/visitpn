@@ -129,9 +129,9 @@
 				locationIndex = locations.indexOf($headerInfo[2]);
 			}else{console.log("Location " + $headerInfo[2] + " not found");}
 
-			contentHolder.innerHTML += "<div class='container dispButtons'> \
+			contentHolder.innerHTML += "<div class='container center dispButtons'> \
 							<a class='btn' href='../things-to-do?category="+categoryIndex+"'>Explore more items in <em>"+ $headerInfo[1] +"</em></a> <a class='btn' href='../things-to-do?location="+locationIndex+"'>Explore more items in <em>" + $headerInfo[2] + "</em></a></div>";
-			contentHolder.innerHTML += "<div class='spacer'></div><div class='container dispButtons'><a class='btn' onclick='history.back()'>Back to Previous</a></div>";
+			contentHolder.innerHTML += "<div class='spacer'></div><div class='container center dispButtons'><a class='btn' onclick='history.back()'>Back to Previous</a></div>";
 						
 		}// end of function populate page
 	</script>
