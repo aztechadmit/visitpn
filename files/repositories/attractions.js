@@ -7,7 +7,7 @@ locations = ["none", "Puerta Azul", "Northport", "Port City", "Bosque Viejo", "P
 	attractions = [];
 	attractions[0] = "Do not use";
 
-	attractions[1] = "Northport Village | Northport | Shopping & Snacking | A preppy outdoor shopping, dining, and living community along the western coast | attractions?index=0 | https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg";
+	attractions[1] = "Northport Village | Northport | Shopping & Snacking | A preppy outdoor shopping, dining, and living community along the western coast | attractions?index=1 | https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg";
 	attractions[2] = "Burke Aquarium | Northport | Attractions | A grand and wonderous aquarium featuring hundreds of ocean creatures and engaging exhibits | attractions?index=0 | https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg";
 	attractions[3] = "MC Resort of Puerta Azul | Puerta Azul | Casinos | Minecraftia's largest casino resort with towering hotel rooms, multi-floor gaming halls, and grand ballrooms | attractions?index=0 | https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg";
-  	attractions[4] = "RE 5 | Northport | Casinos | Reyman Estates hotel #5 featuring luxury rooms, a rooftop pool, and a flexible convention & meeting space | attractions?index=0 | https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg";
+  	attractions[4] = "RE Resort of Northport | Northport | Casinos | Reyman Estates hotel #5 featuring luxury rooms, a rooftop pool, and a flexible convention & meeting space | attractions?index=0 | https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg";
