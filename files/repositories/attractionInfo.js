@@ -1,4 +1,5 @@
-attractionInfo = [];
+attractionInfo = [];attractionSummary = [];attractionDescription = [];attractionImages = [];attractionSimilar = [];
+
 /*
         placeholder: https://aztechadmit.github.io/visitpn/files/images/placeholder.jpg
 
