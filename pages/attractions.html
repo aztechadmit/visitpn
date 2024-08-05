@@ -18,7 +18,7 @@ e<!DOCTYPE html>
 			#dispImages{display:flex; flex-flow:row; justify-content:center; flex-wrap:wrap;}
 			#dispImages img{max-width:300px; align-self:stretch; border-radius:20px; object-fit:cover; margin:auto;}
 
-			#dispButtons a.btn{margin:10px;}
+			.dispButtons a.btn{margin:10px;}
 		</style>
 
 	</head>
@@ -28,6 +28,7 @@ e<!DOCTYPE html>
 
 		<!-- BODY CONTENT -->
 		<br>
+		<!--
 		<div id='contentHolder'>
 			<div class='container' style='background:lightgray;'>
 				<div class='columnContainer'>
@@ -57,6 +58,11 @@ e<!DOCTYPE html>
 			<div class='container center' id='dispButtons'>
 				<a class='btn'>Explore Category <em>Category</em></a> <a class='btn'>Explore Other Items in <em>Location</em></a> <a class='btn' onclick='history.back()'>Back to Previous</a>
 			</div>
+		</div> -->
+
+		<div class='container center'>
+			<h2>Error Loading Content</h2>
+			Please navigate to the previous page and try again.
 		</div>
 
 		<br><br>
@@ -69,6 +75,7 @@ e<!DOCTYPE html>
 	<script>createHeader();</script>
 
 	<script type='text/javascript'src='https://aztechadmit.github.io/visitpn/files/repositories/attractionInfo.js'></script>
+	<script type='text/javascript'src='https://aztechadmit.github.io/visitpn/files/repositories/attractions.js'></script>
 
 	<script>
 		const urlParams = new URLSearchParams(window.location.search);
@@ -111,9 +118,18 @@ e<!DOCTYPE html>
 				contentHolder.innerHTML += "</div><div class='spacer'></div>";
 			}
 
-			contentHolder.innerHTML += "<div class='container' id='dispImages'></div>";
+			if(categories.includes($headerInfo[1])){
+				categoryIndex = categories.indexOf($headerInfo[1]);
+			}else{console.log("Category " + $headerInfo[1] + " not found");}
 
-			
+			if(locations.includes($headerInfo[2])){
+				locationIndex = locations.indexOf($headerInfo[2]);
+			}else{console.log("Location " + $headerInfo[2] + " not found");}
+
+			contentHolder.innerHTML += "<div class='container dispButtons'> \
+							<a class='btn' href='../things-to-do?category="+categoryIndex+"'>Explore more items in <em>"+ $headerInfo[1] +"</em></a> <a class='btn' href='../things-to-do?location="+locationIndex+"'>Explore more items in <em>" + $headerInfo[2] + "</em></a></div>";
+			contentHolder.innerHTML += "<div class='spacer'></div><div class='container dispButtons'><a class='btn' onclick='history.back()'>Back to Previous</a></div>";
+						
 		}// end of function populate page
 	</script>
 	
