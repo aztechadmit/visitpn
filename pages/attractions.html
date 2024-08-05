@@ -65,6 +65,21 @@
 	<!-- CREATE THE HEADER AND FOOTER -->
 	<script type='text/javascript'src='https://aztechadmit.github.io/visitpn/files/header/headerScript.js'></script>
 	<script>createHeader();</script>
+
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+
+		if(urlParams.has("index")){
+			const index = urlParams.get("index");
+
+			if(index==0){
+				window.location.replace('redirect');
+			}
+			
+		}else{
+			window.location.replace('../attractions-error-page');
+		}
+	</script>
 	
 </html>
   
