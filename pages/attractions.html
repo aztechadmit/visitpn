@@ -101,23 +101,24 @@
 			$headerInfo = attractionInfo[index].split(" | ");
 
 			// Page introduction
-			contentHolder.innerHTML = "<div class='container' style='background:lightgray;'><div class='columnContainer'>";
-			contentHolder.innerHTML += "<img src='" + $images[0] + "'><div style='align-self:stretch'><h1 class='blue' id='dispName'>" + $headerInfo[0] + "</h1><h4 id='dispLocation'>"+ $headerInfo[2] +"</h4>";
-			contentHolder.innerHTML += "<p id='dispIntro'>" + attractionSummary[index] +"</p></div></div></div>";
+			contentHolder.innerHTML = "<div class='container' style='background:lightgray;'><div class='columnContainer'> \
+							<img src='" + $images[0] + "'><div style='align-self:stretch'><h1 class='blue' id='dispName'>" + $headerInfo[0] + "</h1><h4 id='dispLocation'>"+ $headerInfo[2] +"</h4> \
+							<p id='dispIntro'>" + attractionSummary[index] +"</p></div></div></div>";
 
 			// Main content
 			contentHolder.innerHTML += "<div class='container' id='dispFurtherReading'>" + attractionDescription[index] + "</div><div class='spacer'></div>";
 
 			if($images[1] != 'nan'){
-				contentHolder.innerHTML += "<div class='container' id='dispImages'>";
+				tempString = "<div class='container' id='dispImages'>";
 				var i=1;
 				while(i < $images.length){
 					if($images[i] != 'nan'){
-						contentHolder.innerHTML += "<img src='"+$images[i]+"'>";
+						tempString += "<img src='"+$images[i]+"'>";
 					}
 					i += 1;
 				}
-				contentHolder.innerHTML += "</div><div class='spacer'></div>";
+				tempString += "</div><div class='spacer'></div>";
+				contentHolder.innerHTML += tempString;
 			}
 
 			if(categories.includes($headerInfo[1])){
