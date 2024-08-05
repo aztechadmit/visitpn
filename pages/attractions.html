@@ -7,7 +7,7 @@
 		<meta charset="utf-8"> 	<meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<!-- TAB TITLE OF PAGE ---------------------------------------------------------------------------------------------------------------------->
-		<title id='attractionName'>Attraction Page | Visit Puertas Nuevas</title>
+		<title id='pageTitle'>Attraction Page | Visit Puertas Nuevas</title>
 		<meta name="author" content="PN Department of Tourism"> <!-- default: PN Department of Tourism -->
 		<meta name="description" content="A page highlighting an attraction of Puertas Nuevas">
 		
@@ -101,6 +101,7 @@
 			$headerInfo = attractionInfo[index].split(" | ");
 
 			// Page introduction
+			document.getElementById("pageTitle").innerHTML = $headerInfo[0] + " | Visit Puertas Nuevas";
 			contentHolder.innerHTML = "<div class='container' style='background:lightgray;'><div class='columnContainer'> \
 							<img src='" + $images[0] + "'><div style='align-self:stretch'><h1 class='blue' id='dispName'>" + $headerInfo[0] + "</h1><h4 id='dispLocation'>"+ $headerInfo[2] +"</h4> \
 							<p id='dispIntro'>" + attractionSummary[index] +"</p></div></div></div>";
