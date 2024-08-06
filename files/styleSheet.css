@@ -71,6 +71,7 @@ a {color:inherit; transition:0.4s;}
 			.tileContainer .tile div .subtext{margin:5px 0 0 0; color:gray;}
 		@media screen and (max-width:700px){
 			.tileContainer{flex-flow:column;}
+			.tileContainer .tile{width:100%;}
 		}
 
 /* -- DECORATIVE ELEMENTS -- */
