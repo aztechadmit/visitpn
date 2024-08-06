@@ -16,7 +16,7 @@
 			#dispName{margin:0 0 5px 0;}
 			
 			#dispImages{display:flex; flex-flow:row; justify-content:center;}
-			#dispImages img{min-width:300px; align-self:stretch; border-radius:20px; object-fit:cover; margin:10px;}
+			#dispImages img{min-width:300px; align-self:stretch; border-radius:20px; object-fit:cover; margin:10px; cursor:pointer;}
 			@media screen and (max-width:930px){
 				#dispImages{flex-wrap:wrap;}
 				#dispImages img{width:100%;}
@@ -124,7 +124,7 @@
 				var i=1;
 				while(i < $images.length){
 					if($images[i] != 'nan'){
-						tempString += "<img src='"+$images[i]+"'>";
+						tempString += "<img src='"+$images[i]+"' onclick='window.open("+'"'+$images[i]+'"'+")'>";
 					}
 					i += 1;
 				}
