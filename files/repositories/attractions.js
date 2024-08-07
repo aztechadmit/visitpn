@@ -1,6 +1,6 @@
 categories = ["none", "Attractions", "Site Seeing", "Restaurants", "Shopping & Snacking", "Casinos", "Entertainment", "Sports & Recreation", "Museums & Galleries"];
 categoryImg = ["none", "menuIcon.png", "menuIcon(11).png", "menuIcon(1).png", "menuIcon(8).png", "menuIcon(5).png", "menuIcon(3).png", "menuIcon(7).png", "menuIcon(4).png"];
-locations = ["none", "Puerta Azul", "Northport", "Port City", "Bosque Viejo", "Playa Del Sol", "Eastlands"];
+locations = ["none", "Puerta Azul", "Northport", "Port City", "Bosque Viejo", "Playa del Sol", "Eastlands"];
 
 // attractions[NUM] = "attraction_name | attraction_location | attraction_category | attraction_description | attraction_link | attraction_image_link";
 // default link: attractions?index=0
