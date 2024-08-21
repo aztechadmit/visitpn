@@ -123,7 +123,7 @@ function miniMenus(){
 }// end of function miniMenus(num)
 
 function createFooter(){
-	footer.innerHTML = "<div id='footerLinks'> 	<div><h4>Information</h4><a>Getting to Puertas Nuevas</a> <a>Visitor Guides</a> <a>Frequently Asked Questions</a> <a>Travel Updates</a></div> \
+	footer.innerHTML = "<div id='footerLinks'> 	<div><h4>Information</h4><a>Getting to Puertas Nuevas</a> <a>Visitor Guides</a> <a>Frequently Asked Questions</a> <a>Travel Updates</a> <a href='"+linkHead+"business/province-profile'>Province Profile</a></div> \
 							<div><h4>Plan Your Visit</h4> <a>Transportation</a> <a>Rental Services</a> <a>Hotels & Lodging</a> <a>Destination Events</a> </div> \
 							<div><h4>Explore PN</h4> <a href='"+linkHead+"things-to-do'>Things to Do</a> <a>Events & Festivals</a> <a href='"+linkHead+"things-to-do?category=1'>Attractions</a> <a href='"+linkHead+"things-to-do?category=3'>Restaurants</a> <a href='"+linkHead+"things-to-do?category=7'>Sports & Recreation</a> <a href='"+linkHead+"things-to-do?category=4'>Shopping & Snacking</a> </div> \
 							<div><h4>Business Opportunities</h4> <a href='"+linkHead+"business/filmpn'>Filming in PN</a> <a>Corporate Events</a> <a>Long-Term Visitors</a> </div> </div>";
