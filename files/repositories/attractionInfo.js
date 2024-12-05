@@ -37,7 +37,7 @@ attractionInfo = [];attractionSummary = [];attractionDescription = [];attraction
         attractionImages[2] = "https://staticg.sportskeeda.com/editor/2023/08/88567-16927566943270-1920.jpg | nan";
         attractionSimilar[2] = "nan";
 
-         attractionInfo[3] = "Globe-City's Careaway Resort | Attractions | Playa del Sol"
+         attractionInfo[3] = "Globe-City's Careaway Resort | Attractions | Lakefields"
         attractionSummary[3] = "Venture into worlds of wonder, magic, and excitement at Globe-City's newest and biggest themed-entertainment destination. Careaway Cove is a massive theme-park resort with three uniquely themed hotels, a large amusement park with over four themed lands, and a thrilling waterpark.";
         attractionDescription[3] = "At Careaway Cove, your worries soar into the distance as your sense of Adventure is reborn! Explore the newest and biggest addition to the Globe-City Parks & Resorts family with even more magic, wonder, and excitement than ever before! Explore completely new themed worlds, unique rides & attractions, delightful entertainment, and Globe-City's world renowned cuisine while you venture through brand new territory. \
                                         <h4>Discover a World Beyond Imagination</h4> Explore four meticulously designed themed lands, each brimming with captivating rides, interactive attractions, and immersive storytelling. From heart-pounding roller coasters to enchanting dark rides, there's something for every thrill seeker and dreamer. Cool down and dive into adventure at our state-of-the-art waterpark, where exhilarating slides and relaxing pools promise endless fun and excitement for all ages.\
